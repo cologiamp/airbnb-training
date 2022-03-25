@@ -1,4 +1,4 @@
-# Ignacio Giampaoli - Sykes Interview Skills Test 👾
+# Ignacio Giampaoli - Sykes Interview Skills Test
 
 __Ignacio Giampaoli__
 
