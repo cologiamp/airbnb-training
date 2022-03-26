@@ -76,7 +76,7 @@
 
 			</div>
 
-			@if ($properties->count())
+			@if ($properties)
             <div class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
                
 
