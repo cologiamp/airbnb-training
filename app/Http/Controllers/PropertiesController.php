@@ -17,10 +17,13 @@ class PropertiesController extends Controller
     public function index()
     {
 
+        //$locations = Location::all();
+        $locations = Location::with('getProperties')->get();
+        
         //Pagination to work the same way as when searching...
         $properties = Property::paginate(2);
 
-        return view('properties.index', ['properties' => $properties]);
+        return view('properties.index', ['properties' => $properties, 'locations' => $locations]);
 
     }
 
