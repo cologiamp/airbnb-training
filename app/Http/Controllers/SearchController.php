@@ -16,13 +16,15 @@ class SearchController extends Controller
 
         $descendantPaginator = null;
 
+        //Check if a location has been entered, if not, bring only based on the other filters.
+        if (!empty($request->input('description')))
+        {
+            $desc = $request->input('description');
+        } else {
+            $desc = '';
+        }
+
         $results = Location::with(['getProperties' => function($query) use ($request, &$descendantPaginator) {
-            // $query->sum('quantity');
-            //$query->select('*'); // without `order_id`
-            if (!empty($request->input('description')))
-            {
-                //Searching in the property name, not in location name yet.
-                //$descendantPaginator = $query->where('property_name', 'LIKE', '%' . $request->input('description') . '%')->paginate(2);
 
                 if (!empty($request->input('beach')))
                 {
@@ -47,9 +49,7 @@ class SearchController extends Controller
 
                 $descendantPaginator = $query->paginate(2);
 
-            }
-
-        }])->where('location_name', 'LIKE', '%' . $request->input('description') . '%')->get();
+        }])->where('location_name', 'LIKE', '%' . $desc . '%')->get();
 
         return view('properties.index', ['properties' => $descendantPaginator]);  
 
