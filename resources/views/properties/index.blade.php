@@ -49,12 +49,12 @@
 				</div>
 
 				<div class="mb-6">
-				<label for="beds" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Max. Number of bedroomss:</label>
+				<label for="beds" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Min. Number of bedroomss:</label>
 				<input type="number" name="beds" id="beds" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-60 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="">
 				</div>
 
 				<div class="mb-6">
-				<label for="sleeps" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Max. Number of sleeps:</label>
+				<label for="sleeps" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Min. Number of sleeps:</label>
 				<input type="number" name="sleeps" id="sleeps" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-60 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="">
 				</div>
 
