@@ -39,12 +39,12 @@ class SearchController extends Controller
                 //BEDS AND SLEEPS
                 if (!empty($request->input('beds')))
                 {
-                    $query->where('beds', '<=', $request->input('beds'));
+                    $query->where('beds', '>=', $request->input('beds'));
                 }
 
                 if (!empty($request->input('sleeps')))
                 {
-                    $query->where('sleeps', '<=', $request->input('sleeps'));
+                    $query->where('sleeps', '>=', $request->input('sleeps'));
                 }
 
                 $descendantPaginator = $query->paginate(2);
